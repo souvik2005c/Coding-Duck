@@ -1,5 +1,5 @@
 import Editor from "@monaco-editor/react";
-import "monaco-themes/themes/Dracula.json";
+
 import { initVimMode } from "monaco-vim";
 import { MonacoBinding } from "y-monaco";
 
@@ -23,9 +23,9 @@ const MonacoEditorWithCollab = ({ lang }: { lang: Lang }) => {
 
   async function handleEditorDidMount(editor: any, monaco: any) {
     if (!provider) return;
-    const themeData = await import("monaco-themes/themes/Dracula.json");
-    monaco.editor.defineTheme("dracula", themeData);
-    monaco.editor.setTheme("dracula");
+
+    // Use default theme or a supported theme
+    monaco.editor.setTheme("vs-dark");
 
     if (vimEnabled) initVimMode(editor /*statusTextRef.current*/);
 
