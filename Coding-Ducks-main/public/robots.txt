@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /dashboard
+SiteMap: https://www.codingducks.xyz/sitemap.xml
